@@ -42,7 +42,8 @@ if(isset($_POST['enrollmentSubmit'])){
     }
     if($isValid){
         echo "Form Submitted";
-        $enrollResult = "UPDATE enrollment SET studentID = '$studentID', courseID = '$courseID' WHERE enrollmentID = $id";
+        $enroll = "UPDATE enrollment SET studentID = '$studentID', courseID = '$courseID' WHERE enrollmentID = $id";
+        $enrollResult = mysqli_query($connection,$enroll);
         if($enrollResult){
             echo "Student Enrolled Successfully";
             header('Location:first.php');

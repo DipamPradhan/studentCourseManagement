@@ -49,7 +49,11 @@ $query = mysqli_query($connection,$fetchquery);
                     <td><?php echo $std['courseID']; ?></td>
                     <td><?php echo $std['courseName']; ?></td>
                     <td><?php echo $std['courseDuration']; ?></td>
-                    <td><a href="editEnrollment.php?id=<?php echo $std['enrollmentID']?>">Edit</a></td>
+                    <td><a href="editEnrollment.php?id=<?php echo $std['enrollmentID']?>">Edit</a>
+                    <a href="deleteEnrollment.php?id=<?php echo $std["enrollmentID"]?>"
+                    onclick = "return confirm('Are you sure to delete this record')">
+                    Delete
+                </a</td>
                 </tr>
             <?php } ?>
         </tr>

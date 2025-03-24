@@ -24,7 +24,12 @@ $query = mysqli_query($connection,$fetchquery);
                     <td><?php echo $crs['courseID'] ?></td>
                     <td><?php echo $crs['courseName']; ?></td>
                     <td><?php echo $crs['courseDuration']; ?></td>
-                    <td><a href="editCourse.php?id=<?php echo $crs['courseID'] ?>">Edit</a></td>
+                    <td><a href="editCourse.php?id=<?php echo $crs['courseID'] ?>">Edit</a>
+                    <a href="deleteCourse.php?id=<?php echo $crs["courseID"]?>"
+                    onclick = "return confirm('Are you sure to delete this record?')">
+                    Delete
+                </a>
+                </td>
                 </tr>
             <?php } ?>
         </tr>

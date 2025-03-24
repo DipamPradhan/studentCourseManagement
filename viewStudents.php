@@ -30,7 +30,12 @@ $query = mysqli_query($connection,$fetchquery);
                     <td><?php echo $std['number']?></td>
                     <td><?php echo $std['faculty']; ?></td>
                     <td><?php echo $std['gender']?></td>
-                    <td><a href="editStudent.php?id=<?php echo $std['studentID']?>">Edit</a></td>
+                    <td><a href="editStudent.php?id=<?php echo $std['studentID']?>">Edit</a>
+                    <a href="deleteStudent.php?id=<?php echo $std["studentID"]?>"
+                    onclick = "return confirm('Are you sure to delete this record?')">
+                    Delete
+            </a>
+                </td>
                 </tr>
             <?php } ?>
         </tr>

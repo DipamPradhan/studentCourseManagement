@@ -1,3 +1,33 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['adminID'])) {
+    header('location: login.php');
+    exit;
+}
+
+// if(!isset($_COOKIE['name'])) {
+//     header('location: student-login.php');
+//     exit;
+// }
+
+// Logout action
+if (isset($_POST['logout'])) {
+    // Destroy the session
+    session_destroy();
+
+    // Destroy session using cookie
+    // $expiry = time() - 60; // Set past time to destroy the cookie
+    // setcookie('name', '', $expiry);
+
+    // Redirect to login page after logout
+    header('location: login.php');
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +39,8 @@
   <body>
     <div class="container">
       <h1>Welcome to Student Course Management System</h1>
+      <form action="" method="POST">      <input type="submit" name="logout" value="Logout" /></form>
+
 
       <div class="linkContainer">
         <div class="links">

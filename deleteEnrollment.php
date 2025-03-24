@@ -12,16 +12,16 @@ if (!$connection) {
 }
 
 // SQL query to delete a user
-$deleteSql = "DELETE FROM students WHERE studentID = $id ";
+$deleteSql = "DELETE FROM enrollment WHERE enrollmentID = $id ";
 
 // Execute query
 $deleteResult = mysqli_query($connection, $deleteSql);
 
 // Show success/fail message
 if ($deleteResult) {
-    echo "Student has been deleted successfully.";
+    echo "Record has been deleted successfully.";
     header("location: first.php");
 } else {
-    echo "Sorry, Student can not be deleted.";
+    echo "Sorry, Record can not be deleted.";
 }
 ?>
