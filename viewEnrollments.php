@@ -1,7 +1,7 @@
 <?php
 $connection = mysqli_connect('localhost','root','','school');
 $fetchquery = "SELECT students.studentID, students.studentName, students.email, students.number, students.faculty, students.gender, 
-    courses.courseName, courses.courseDuration
+    courses.courseName, courses.courseDuration,courses.courseID,enrollment.enrollmentID
     FROM students
     JOIN enrollment ON students.studentID = enrollment.studentID
     JOIN courses ON enrollment.courseID = courses.courseID
@@ -26,24 +26,30 @@ $query = mysqli_query($connection,$fetchquery);
 <body>
     <table border="1" style="border-collapse: collapse;">
         <tr>
-            <th>StudentID</th>
+            <th>Enrollment ID</th>
+            <th>Student ID</th>
             <th>Name</th>
             <th>Email</th>
             <th>Number</th>
             <th>Faculty</th>
             <th>Gender</th>
+            <th>Course ID</th>
             <th>Course Name</th>
             <th>Duration</th>
+            <th>Actions</th>
             <?php while($std = mysqli_fetch_assoc($query)){ ?>
                 <tr>
+                    <td><?php echo $std['enrollmentID'] ?></td>
                     <td><?php echo $std['studentID']; ?></td>
                     <td><?php echo $std['studentName']; ?></td>
                     <td><?php echo $std['email']; ?></td>
                     <td><?php echo $std['number']?></td>
                     <td><?php echo $std['faculty']; ?></td>
                     <td><?php echo $std['gender']?></td>
+                    <td><?php echo $std['courseID']; ?></td>
                     <td><?php echo $std['courseName']; ?></td>
                     <td><?php echo $std['courseDuration']; ?></td>
+                    <td><a href="editEnrollment.php?id=<?php echo $std['enrollmentID']?>">Edit</a></td>
                 </tr>
             <?php } ?>
         </tr>

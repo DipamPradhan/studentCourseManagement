@@ -1,4 +1,5 @@
 //buttons
+console.log("console");
 const enrollment = document.getElementById("enrollment");
 const addCourse = document.getElementById("addCourse");
 const addStudent = document.getElementById("addStudent");
