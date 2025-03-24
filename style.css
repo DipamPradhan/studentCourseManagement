@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: #2F3C7E;
+}
+
+h1{
+    text-align: center;
+    margin: 20px 0;
+    color: #FBEAEB;
+}
+
+
+
+.linkContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    /* margin: 20px ; */
+    border: 1px solid white;
+    padding: 10px;
+    background-color: #fdd4d7;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.links button{
+    padding: 10px;
+    border: 1px solid black;
+    height: fit-content;
+    width: fit-content;
+    background-color: #FBEAEB;
+
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+
+}
+
+.links button:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    color: #2F3C7E;
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+
+
+
+.functionContainer{
+    background-color: white;
+    margin: 40px 20px 40px 20px ;
+    padding: 20px;
+    display: none;
+}
+
+.functions{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* gap: 40px; */
+    margin: 20px 0px 20px 0px;
+    /* position: relative; */
+
+}
+
+.functions div div{
+    height: fit-content;
+    width: 100%;
+    border: 1px solid black;
+    padding: 20px ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* color: red; */
+    background-color: #FBEAEB;
+    margin-bottom: 40px;
+}
+
+.functions h4{
+    margin-bottom: 20px;
+}
+
+.redirect{
+    position: absolute;
+    top: 0;
+}
+
+.functionUsage{
+    display: none;
+}
+
+#unclicked{
+    color: #FBEAEB;
+    text-align: center;
+    background-color: black;
+    width: 100%;   
+    margin-top: 30px;
+    font-size: 25px;
+}
+
