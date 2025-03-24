@@ -27,7 +27,7 @@
                 <div id="enrollmentDiv" class="functionUsage">
                     <h4>Enrollment</h4>
                     <div class="enrollment">
-                        <?php include 'C:\xampp\htdocs\DipamPradhan\studentCourseMang\enrollment.php'; ?>
+                        <?php include 'C:\xampp\htdocs\DipamPradhan\studentCourseMang\addToDB\enrollment.php'; ?>
                     </div>
                 </div>
 
@@ -35,7 +35,7 @@
                 <div id="addCourseDiv" class="functionUsage">
                     <h4>Add Course</h4>
                     <div class="addCourse">
-                        <?php include 'C:\xampp\htdocs\DipamPradhan\studentCourseMang\course.php'; ?>
+                        <?php include 'C:\xampp\htdocs\DipamPradhan\studentCourseMang\addToDB\course.php'; ?>
                     </div>
                 </div>
 
@@ -43,7 +43,7 @@
                 <div id="addStudentDiv" class="functionUsage">
                     <h4>Add Student</h4>
                     <div class="addStudent">
-                        <?php include 'C:\xampp\htdocs\DipamPradhan\studentCourseMang\student.php'; ?>
+                        <?php include 'C:\xampp\htdocs\DipamPradhan\studentCourseMang\addToDB\student.php'; ?>
                     </div>
                 </div>
 
@@ -51,7 +51,7 @@
                 <div id="viewCoursesDiv" class="functionUsage">
                     <h4>View Courses</h4>
                     <div class="viewCourses">
-                        <?php include 'C:\xampp\htdocs\DipamPradhan\studentCourseMang\viewCourses.php'; ?>
+                        <?php include 'C:\xampp\htdocs\DipamPradhan\studentCourseMang\view\viewCourses.php'; ?>
                     </div>
                 </div>
 
@@ -59,7 +59,7 @@
                 <div id="viewStudentsDiv" class="functionUsage">
                     <h4>View Students</h4>
                     <div class="viewStudents">
-                        <?php include 'C:\xampp\htdocs\DipamPradhan\studentCourseMang\viewStudents.php'; ?>
+                        <?php include 'C:\xampp\htdocs\DipamPradhan\studentCourseMang\view\viewStudents.php'; ?>
                     </div>
                 </div>
 
@@ -67,7 +67,7 @@
                 <div id="viewEnrollmentsDiv" class="functionUsage">
                     <h4>View Enrollments</h4>
                     <div class="viewEnrollments">
-                        <?php include 'C:\xampp\htdocs\DipamPradhan\studentCourseMang\viewEnrollments.php'; ?>
+                        <?php include 'C:\xampp\htdocs\DipamPradhan\studentCourseMang\view\viewEnrollments.php'; ?>
                     </div>
                 </div>
             </div>
